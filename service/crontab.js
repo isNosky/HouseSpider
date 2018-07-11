@@ -13,7 +13,7 @@ var fs = require('fs');
 var pool = require('./dbpool.js').pool(config.dvosdbHost,config.dvosdbPort,config.dvosdbUser,config.dvosdbPassword,config.dvosdbDSN);
 
 var sqlfmt = "INSERT INTO `house`.`tbl_house` (`name`, `company`, `regstarttime`, `regendtime`, `buildingno`, `registrationno`, `recvdocstarttime`, `recvdocendtime`, `recvdocaddr`) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')";
-var sqlpublish = "INSERT INTO `house`.`tbl_publish` (`index_no`, `title`, `publishtime`, `filelink`, `trid`) VALUES ('%s', '%s', '%s', '%s', '%s')";
+var sqlpublish = "INSERT INTO `house`.`tbl_publish` (`index_no`, `title`, `publishtime`, `filelink`) VALUES ('%s', '%s', '%s', '%s')";
 
 function getTime(str){
     //var reg = /^[1-9]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])\s+(20|21|22|23|[0-1]\d):[0-5]\d$/;
